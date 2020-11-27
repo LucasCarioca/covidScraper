@@ -19,3 +19,13 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run job
         run: python main.py
+      - name: Commit files
+        run: |
+          git config --local user.email "lucasfds2777@gmail.com"
+          git config --local user.name "Lucas Desouza"
+          git commit -m "daily values" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
