@@ -1,1 +1,14 @@
-{"total": 12706167, "deaths": 254530, "deathRate": 2.003200493114879, "recovered": 4871203, "recoveryRate": 38.33731289695783, "currentlyInfected": 7580434, "currentlyHospitalized": 90481, "hospitalizedRate": 1.1936123973904396, "currentlyInICU": 17802, "inICURate": 0.2348414352001482, "daily": [{"cases": 125082, "hospitalizations": 2236, "deaths": 1319, "date": 20201126}]}
+{
+  "total": 12706167,
+  "deaths": 254530,
+  "deathRate": 2.003200493114879,
+  "recovered": 4871203,
+  "recoveryRate": 38.33731289695783,
+  "currentlyInfected": 7580434,
+  "currentlyHospitalized": 90481,
+  "hospitalizedRate": 1.1936123973904396,
+  "currentlyInICU": 17802,
+  "inICURate": 0.2348414352001482,
+  "daily": [
+  ]
+}

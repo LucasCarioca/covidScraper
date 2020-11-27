@@ -1,9 +1,9 @@
 name: DailyLoad
 on:
-  push:
+#  push:
 #  pull_request:
-#  schedule:
-#    - cron: '0 0 * * *'  # every day at midnight
+  schedule:
+    - cron: '0 0 * * *'  # every day at midnight
 jobs:
   dailyLoad:
     name: Load daily values
