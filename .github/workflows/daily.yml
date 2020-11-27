@@ -1,0 +1,21 @@
+name: DailyLoad
+on:
+  push:
+#  pull_request:
+#  schedule:
+#    - cron: '0 0 * * *'  # every day at midnight
+jobs:
+  dailyLoad:
+    name: Load daily values
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content to github runner.
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run job
+        run: python main.py

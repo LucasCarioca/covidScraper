@@ -1,25 +1,40 @@
 import requests
-from bs4 import BeautifulSoup
-
+import json
 
 class CovidStats:
-    source_url = 'https://www.worldometers.info/coronavirus/'
+    source_url = 'https://api.covidtracking.com/v1/us/current.json'
 
     def __init__(self):
-        self.page_content = requests.get(self.source_url).content
-        self.soup = BeautifulSoup(self.page_content, 'html.parser')
+        self.content = json.loads(requests.get(self.source_url).content)[0]
 
-    def total_cases(self):
-        raw = self.get_main_counters()[0].text
-        return int(raw.replace(',', ''))
+    def us_total_cases(self):
+        return self.content["positive"]
 
-    def total_deaths(self):
-        raw = self.get_main_counters()[1].text
-        return int(raw.replace(',', ''))
+    def us_total_currently_hospitalized(self):
+        return self.content["hospitalizedCurrently"]
 
-    def total_recovered(self):
-        raw = self.get_main_counters()[2].text
-        return int(raw.replace(',', ''))
+    def us_total_currently_in_icu(self):
+        return self.content["inIcuCurrently"]
 
-    def get_main_counters(self):
-        return self.soup.findAll('div', attrs={'class': 'maincounter-number'})
+    def us_total_currently_on_ventilator(self):
+        return self.content["onVentilatorCurrently"]
+
+    def us_total_recovered(self):
+        return self.content["recovered"]
+
+    def us_total_deaths(self):
+        return self.content["death"]
+
+    def us_daily_new_cases(self):
+        return self.content["positiveIncrease"]
+
+    def us_daily_new_hospitalizations(self):
+        return self.content["hospitalizedIncrease"]
+
+    def us_daily_new_deaths(self):
+        return self.content["deathIncrease"]
+
+    def date(self):
+        return self.content["date"]
+
+
