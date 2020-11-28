@@ -3,9 +3,11 @@ import json
 
 class CovidStats:
     source_url = 'https://api.covidtracking.com/v1/us/current.json'
+    daily_source_url = 'https://api.covidtracking.com/v1/us/daily.json'
 
     def __init__(self):
         self.content = json.loads(requests.get(self.source_url).content)[0]
+        self.daily_content = json.loads(requests.get(self.daily_source_url).content)
 
     def us_total_cases(self):
         return self.content["positive"]
@@ -33,6 +35,18 @@ class CovidStats:
 
     def us_daily_new_deaths(self):
         return self.content["deathIncrease"]
+
+    def us_daily(self):
+        daily = []
+        for x in range(len(self.daily_content)):
+            new_day = {
+                'cases': self.daily_content[x]["positiveIncrease"],
+                'hospitalizations': self.daily_content[x]["hospitalizedIncrease"],
+                'deaths': self.daily_content[x]["deathIncrease"],
+                'date': self.daily_content[x]["date"]
+            }
+            daily.insert(0, new_day)
+        return daily
 
     def date(self):
         return self.content["date"]
