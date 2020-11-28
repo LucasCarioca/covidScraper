@@ -17,6 +17,7 @@ const DailyHospitalizationsLine = () => {
     }, [])
 
     const content = () => {
+        console.log(data)
         return (
             <div>
                 <FlexibleXYPlot margin={{left: 100}} height={500}>
@@ -47,7 +48,7 @@ const DailyHospitalizationsLine = () => {
                             }
                         }}
                     />
-                    <LineSeries data={data} />
+                    <LineSeries color="red" data={data} />
                 </FlexibleXYPlot>
             </div>
         )

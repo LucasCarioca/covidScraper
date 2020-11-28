@@ -24,7 +24,7 @@ const Totals = () => {
     const content = () => {
         return (
             <TableContainer component={Paper}>
-                <Table size={'large'}>
+                <Table>
                     <TableHead>
                         <TableRow>
                             <TableCell>Index</TableCell>

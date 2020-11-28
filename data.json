@@ -21,24 +21,6 @@
       "hospitalizations": 3000,
       "deaths": 1319,
       "date": 20201128
-    },
-    {
-      "cases": 203082,
-      "hospitalizations": 3800,
-      "deaths": 1319,
-      "date": 20201129
-    },
-    {
-      "cases": 230082,
-      "hospitalizations": 4333,
-      "deaths": 1319,
-      "date": 20201130
-    },
-    {
-      "cases": 300082,
-      "hospitalizations": 4600,
-      "deaths": 1319,
-      "date": 20201131
     }
   ]
 }
