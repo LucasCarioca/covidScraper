@@ -11,7 +11,6 @@ const TotalsPie = () => {
         fetch('https://raw.githubusercontent.com/LucasCarioca/covidScraper/main/data.json')
             .then(async res => {
                 const loaded = await res.json();
-                console.log(loaded);
                 setData(loaded);
             })
     }, [])
