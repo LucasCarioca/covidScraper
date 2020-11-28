@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "total": 12706167,
   "deaths": 254530,
@@ -24,3 +25,6 @@
     }
   ]
 }
+=======
+{"total": 12901146, "deaths": 255904, "deathRate": 1.9835757226528559, "recovered": 4947446, "recoveryRate": 38.34888776547448, "currentlyInfected": 7697796, "currentlyHospitalized": 89834, "hospitalizedRate": 1.167009362160286, "currentlyInICU": 17835, "inICURate": 0.23168969403709838, "daily": [{"cases": 90082, "hospitalizations": 2000, "deaths": 1319, "date": 20201127}, {"cases": 125082, "hospitalizations": 3000, "deaths": 1319, "date": 20201128}, {"cases": 203082, "hospitalizations": 3800, "deaths": 1319, "date": 20201129}, {"cases": 230082, "hospitalizations": 4333, "deaths": 1319, "date": 20201130}, {"cases": 300082, "hospitalizations": 4600, "deaths": 1319, "date": 20201131}, {"cases": 194979, "hospitalizations": 3648, "deaths": 1374, "date": 20201127}]}
+>>>>>>> 0d8a3e574ce6b66807238b420aea858ae469bc2a
