@@ -22,7 +22,7 @@ const TotalsPie = () => {
                 <RadialChart
                     colorType="literal"
                     height={400}
-                    width={400}
+                    width={575}
                     data={[
                         {label: `Currently Infected ${numberWithCommas(data.currentlyInfected)}`, angle: data.currentlyInfected, color: '#ffeaa7' },
                         {label: `Dead ${numberWithCommas(data.deaths)}`, angle: data.deaths, color: '#ff7675'},

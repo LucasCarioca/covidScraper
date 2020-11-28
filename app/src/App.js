@@ -1,41 +1,49 @@
 import React from 'react';
 import Totals from "./components/Totals";
-import {Container, Grid, Typography} from "@material-ui/core";
+import {CardContent, Container, Grid, Typography} from "@material-ui/core";
 import TotalsPie from "./components/TotalsPie";
 import DailyHospitalizationsLine from "./components/DailyHospitalizationsLine";
 import DailyNewCasesLine from "./components/DailyNewCasesLine";
+import Card from "@material-ui/core/Card";
 
 function App() {
 
     return (
         <div>
             <Container>
+                <br/>
                 <Typography variant={'h2'}>US Covid-19 status</Typography>
                 <hr/>
                 <Typography variant={'h2'}>Totals</Typography>
                 <br/>
                 <Grid container spacing={2}>
                     <Grid item md={6}>
-                        <TotalsPie/>
+                        <Card>
+                            <CardContent>
+                                <TotalsPie/>
+                            </CardContent>
+                        </Card>
                     </Grid>
                     <Grid item md={6}>
                         <Totals/>
                     </Grid>
                 </Grid>
-                <Grid container spacing={2}>
-                    <Grid item md={12}>
-                        <Typography variant={'h2'}>Daily Hospitalizations</Typography>
-                        <br/>
+                <br/>
+                <Typography variant={'h2'}>Daily Hospitalizations</Typography>
+                <br/>
+                <Card>
+                    <CardContent>
                         <DailyHospitalizationsLine/>
-                    </Grid>
-                </Grid>
-                <Grid container spacing={2}>
-                    <Grid item md={12}>
-                        <Typography variant={'h2'}>Daily New Cases</Typography>
-                        <br/>
+                    </CardContent>
+                </Card>
+                <br/>
+                <Typography variant={'h2'}>Daily New Cases</Typography>
+                <br/>
+                <Card>
+                    <CardContent>
                         <DailyNewCasesLine/>
-                    </Grid>
-                </Grid>
+                    </CardContent>
+                </Card>
             </Container>
         </div>
     );
