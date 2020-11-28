@@ -3,7 +3,7 @@ import {makeWidthFlexible, XYPlot, LineSeries, VerticalGridLines, HorizontalGrid
 
 const FlexibleXYPlot = makeWidthFlexible(XYPlot);
 
-const DailyHospitalizationsLine = () => {
+const DailyNewCasesLine = () => {
     const [data, setData] = useState()
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/LucasCarioca/covidScraper/main/data.json')
@@ -11,7 +11,7 @@ const DailyHospitalizationsLine = () => {
                 const loaded = await res.json();
                 console.log(loaded.daily);
                 setData(loaded.daily.map(day=> {
-                    return {x: day.date, y: day.hospitalizations}
+                    return {x: day.date, y: day.cases}
                 }));
             })
     }, [])
@@ -37,7 +37,7 @@ const DailyHospitalizationsLine = () => {
                         }}
                     />
                     <YAxis
-                        title={'Hospitalizations'}
+                        title={'New Cases'}
                         style={{
                             title: {
                                 fontSize: '1rem'
@@ -60,4 +60,4 @@ const DailyHospitalizationsLine = () => {
     );
 }
 
-export default DailyHospitalizationsLine;
+export default DailyNewCasesLine;

@@ -21,16 +21,16 @@ const TotalsPie = () => {
             <div>
                 <RadialChart
                     colorType="literal"
-                    height={500}
-                    width={500}
+                    height={400}
+                    width={400}
                     data={[
                         {label: `Currently Infected ${numberWithCommas(data.currentlyInfected)}`, angle: data.currentlyInfected, color: '#ffeaa7' },
                         {label: `Dead ${numberWithCommas(data.deaths)}`, angle: data.deaths, color: '#ff7675'},
                         {label: `Recovered ${numberWithCommas(data.recovered)}`, angle: data.recovered, color: '#55efc4'}
                     ]}
-                    labelsRadiusMultiplier={0.9}
+                    labelsRadiusMultiplier={1}
                     labelsStyle={{
-                        fontSize: '1rem',
+                        fontSize: '.90rem',
                         color: '#636e72',
                         fontWeight: 'bolder'
                     }}
