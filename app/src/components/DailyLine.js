@@ -56,14 +56,10 @@ const DailyLine = ({dataPoint, color, visible}) => {
     }, [range, dataPoint, visible])
 
     const tickCount = () => {
-        if (range === 'all') {
+        if (range === 'all' || range === '6months') {
             return 6
-        } else if (range === '2weeks') {
-            return 14
-        } else if (range === '1week') {
-            return 7
         } else {
-            return 15
+            return 7
         }
     }
 
