@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {RadialChart} from "react-vis";
+import {makeWidthFlexible, RadialChart} from "react-vis";
+
+const FlexibleRadialChart = makeWidthFlexible(RadialChart);
 
 const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -18,10 +20,9 @@ const TotalsPie = () => {
     const content = () => {
         return (
             <div>
-                <RadialChart
+                <FlexibleRadialChart
                     colorType="literal"
                     height={335}
-                    width={575}
                     data={[
                         {label: `Currently Infected ${numberWithCommas(data.currentlyInfected)}`, angle: data.currentlyInfected, color: '#ffeaa7' },
                         {label: `Dead ${numberWithCommas(data.deaths)}`, angle: data.deaths, color: '#ff7675'},
