@@ -118,12 +118,12 @@ const DailyLine = ({dataPoint, color, visible}) => {
                 <Button variant={range === '2months' ? 'contained' : 'outlined'} color={'primary'}  size={'small'} onClick={() => {
                     setRange('2months')
                 }}>Sixty Days</Button>
+                <Button variant={range === '1month' ? 'contained' : 'outlined'} color={'primary'}  size={'small'} onClick={() => {
+                    setRange('1month')
+                }}>Thirty Days</Button>
                 <Button variant={range === '2weeks' ? 'contained' : 'outlined'} color={'primary'}  size={'small'} onClick={() => {
                     setRange('2weeks')
                 }}>Two Weeks</Button>
-                <Button variant={range === '1week' ? 'contained' : 'outlined'} color={'primary'}  size={'small'} onClick={() => {
-                    setRange('1week')
-                }}>One Week</Button>
             </ButtonGroup>
             {loading ? <p>loading...</p> : content()}
         </div>
