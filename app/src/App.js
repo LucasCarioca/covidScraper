@@ -26,8 +26,8 @@ import {
     Route
 } from "react-router-dom";
 import Home from "./pages/Home";
-import Daily from "./components/Daily";
 import About from "./pages/About";
+import Daily from "./pages/Daily";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -111,8 +111,6 @@ function App() {
                         </List>
                     </div>
                 </Drawer>
-                <Container>
-                    <br/>
                     <Switch>
                         <Route path="/deaths">
                             <Daily dataPoint={'deaths'} color={'#d63031'} title={'Daily new deaths'}/>
@@ -130,7 +128,6 @@ function App() {
                             <Home />
                         </Route>
                     </Switch>
-                </Container>
             </Router>
         </div>
     );
