@@ -114,21 +114,21 @@ const DailyLine = ({dataPoint, color, visible}) => {
     return (
         <div>
             <ButtonGroup>
-                <Button variant={range === 'all' ? 'contained' : 'outlined'} color={'primary'}
+                <Button variant={range === 'all' ? 'contained' : 'outlined'} color={'primary'} size={'small'}
                         onClick={() => setRange('all')}>All</Button>
-                <Button variant={range === '6months' ? 'contained' : 'outlined'} color={'primary'} onClick={() => {
+                <Button variant={range === '6months' ? 'contained' : 'outlined'} color={'primary'}  size={'small'} onClick={() => {
                     setRange('6months')
                 }}>Ninety Days</Button>
-                <Button variant={range === '2months' ? 'contained' : 'outlined'} color={'primary'} onClick={() => {
+                <Button variant={range === '2months' ? 'contained' : 'outlined'} color={'primary'}  size={'small'} onClick={() => {
                     setRange('2months')
                 }}>Sixty Days</Button>
-                <Button variant={range === '1month' ? 'contained' : 'outlined'} color={'primary'} onClick={() => {
+                <Button variant={range === '1month' ? 'contained' : 'outlined'} color={'primary'}  size={'small'} onClick={() => {
                     setRange('1month')
                 }}>Thirty Days</Button>
-                <Button variant={range === '2weeks' ? 'contained' : 'outlined'} color={'primary'} onClick={() => {
+                <Button variant={range === '2weeks' ? 'contained' : 'outlined'} color={'primary'}  size={'small'} onClick={() => {
                     setRange('2weeks')
                 }}>Two Weeks</Button>
-                <Button variant={range === '1week' ? 'contained' : 'outlined'} color={'primary'} onClick={() => {
+                <Button variant={range === '1week' ? 'contained' : 'outlined'} color={'primary'}  size={'small'} onClick={() => {
                     setRange('1week')
                 }}>One Week</Button>
             </ButtonGroup>
