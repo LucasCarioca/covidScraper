@@ -1,36 +1,31 @@
 import React from 'react';
-import Totals from "./components/Totals";
 import {
-    CardContent,
-    Container,
     makeStyles,
-    Typography,
-    Card,
     AppBar,
+    ListItemIcon,
+    ListItemText,
+    Drawer,
+    Container,
+    Typography,
     Toolbar,
-    Divider
+    Divider,
+    List,
+    ListItem,
+    IconButton
 } from "@material-ui/core";
-import GitHubIcon from '@material-ui/icons/GitHub';
 import MenuIcon from '@material-ui/icons/Menu';
-import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import HomeIcon from '@material-ui/icons/Home';
-import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
+import HelpIcon from '@material-ui/icons/Help';
 import ErrorIcon from '@material-ui/icons/Error';
 import TrendingUpIcon from '@material-ui/icons/TrendingUp';
-import IconButton from "@material-ui/core/IconButton";
-import HelpIcon from '@material-ui/icons/Help';
-import Drawer from "@material-ui/core/Drawer";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import Home from "./pages/Home";
+import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
 import {
     BrowserRouter as Router,
+    Link,
     Switch,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
+import Home from "./pages/Home";
 import Daily from "./components/Daily";
 import About from "./pages/About";
 
