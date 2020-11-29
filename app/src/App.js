@@ -60,7 +60,7 @@ function App() {
     return (
         <div className={classes.root}>
             <Router>
-                <AppBar position="static">
+                <AppBar position="sticky">
                     <Toolbar>
                         <IconButton onClick={toggleDrawer(true)} edge="start" className={classes.menuButton}
                                     color="inherit"
