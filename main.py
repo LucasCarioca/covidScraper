@@ -26,7 +26,7 @@ def main():
         'deathRate': (deaths/total)*100,
         'recovered': recovered,
         'recoveryRate': (recovered/total)*100,
-        'currentlyInfected': total - recovered - deaths,
+        'currentlyInfected': infected,
         'currentlyHospitalized': hospitalized,
         'hospitalizedRate': (hospitalized/infected)*100,
         'currentlyInICU': icu,
