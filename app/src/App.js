@@ -68,7 +68,7 @@ function App() {
                             <MenuIcon/>
                         </IconButton>
                         <Typography variant="h6" className={classes.title}>
-                            Covid19 Stats
+                            US Covid Stats
                         </Typography>
                     </Toolbar>
                 </AppBar>
