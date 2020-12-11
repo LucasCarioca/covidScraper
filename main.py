@@ -18,7 +18,7 @@ def main():
     print('Total recovered: {:,} ({:.2f}%)'.format(recovered, (recovered/total)*100))
     print('Currently Infected: {:,}'.format(infected))
     print('Total hospitalized: {:,} ({:.2f}%)'.format(hospitalized, (hospitalized/infected)*100))
-    print('Total in ICU: {:,} ({:.2f}%)'.format(icu, (icu/infected)*100))
+    print('Total in ICU: {:,} ({:.2f}%)'.format(icu, (icu/hospitalized)*100))
 
     record = {
         'total': total,
@@ -30,7 +30,7 @@ def main():
         'currentlyHospitalized': hospitalized,
         'hospitalizedRate': (hospitalized/infected)*100,
         'currentlyInICU': icu,
-        'inICURate': (icu/infected)*100,
+        'inICURate': (icu/hospitalized)*100,
         'daily': covid.us_daily()
     }
 
