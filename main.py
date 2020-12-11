@@ -4,7 +4,6 @@ import json
 
 def main():
     file = open("data.json")
-    json_file = json.loads(file.read())
     file.close()
     covid = sc.CovidStats()
     total = covid.us_total_cases()
