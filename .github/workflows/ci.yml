@@ -1,0 +1,35 @@
+name: CICD
+on:
+  push:
+    branches: 
+    - 'master' 
+  pull_request:
+    branches:
+    - 'master'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: yarn install --frozen-lockfile
+      working-directory: app
+    - run: yarn build
+      working-directory: app
+    - name: Create release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: npm run release 
+      working-directory: app
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: covid-stats
+        path: build
+      working-directory: app
