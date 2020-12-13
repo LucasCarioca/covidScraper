@@ -31,5 +31,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: covid-stats
-        path: build
-      working-directory: app
+        path: app/build
