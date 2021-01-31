@@ -43,20 +43,20 @@ const Totals = () => {
                                 <TableCell>{numberWithCommas(data.deaths)}</TableCell>
                                 <TableCell>{data.deathRate.toFixed(2)}%</TableCell>
                             </TableRow>
-                            <TableRow>
-                                <TableCell><strong>Total recovered</strong></TableCell>
-                                <TableCell>{numberWithCommas(data.recovered)}</TableCell>
-                                <TableCell>{data.recoveryRate.toFixed(2)}%</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell><strong>Currently infected</strong></TableCell>
-                                <TableCell>{numberWithCommas(data.currentlyInfected)}</TableCell>
-                                <TableCell></TableCell>
-                            </TableRow>
+                            {/*<TableRow>*/}
+                            {/*    <TableCell><strong>Total recovered</strong></TableCell>*/}
+                            {/*    <TableCell>{numberWithCommas(data.recovered)}</TableCell>*/}
+                            {/*    <TableCell>{data.recoveryRate.toFixed(2)}%</TableCell>*/}
+                            {/*</TableRow>*/}
+                            {/*<TableRow>*/}
+                            {/*    <TableCell><strong>Currently infected</strong></TableCell>*/}
+                            {/*    <TableCell>{numberWithCommas(data.currentlyInfected)}</TableCell>*/}
+                            {/*    <TableCell></TableCell>*/}
+                            {/*</TableRow>*/}
                             <TableRow>
                                 <TableCell><strong>Currently hospitalized</strong></TableCell>
                                 <TableCell>{numberWithCommas(data.currentlyHospitalized)}</TableCell>
-                                <TableCell>{data.hospitalizedRate.toFixed(2)}%</TableCell>
+                                {/*<TableCell>{data.hospitalizedRate.toFixed(2)}%</TableCell>*/}
                             </TableRow>
                             <TableRow>
                                 <TableCell><strong>Currently in ICU</strong></TableCell>
