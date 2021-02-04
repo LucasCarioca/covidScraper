@@ -1,6 +1,6 @@
 import React from 'react';
 import Totals from "../components/Totals";
-import TotalsPie from "../components/TotalsPie";
+// import TotalsPie from "../components/TotalsPie";
 import {Container} from "@material-ui/core";
 
 const Home = () => {
