@@ -9,7 +9,7 @@ const Home = () => {
             <h1>
                 Current Totals
             </h1>
-            <TotalsPie/>
+            {/*<TotalsPie/>*/}
             <Totals/>
         </Container>
     )
